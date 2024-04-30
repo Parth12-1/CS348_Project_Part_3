@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="616.0" prefWidth="811.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.part_3.HelloController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <AnchorPane prefHeight="576.0" prefWidth="852.0">
+         <children>
+            <Text fx:id="srIdHoursTxt" layoutX="96.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee #" textAlignment="CENTER" wrappingWidth="89.21630859375">
+               <font>
+                  <Font name="Songti SC Black" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="srNameHoursTxt" layoutX="96.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" textAlignment="CENTER" wrappingWidth="89.21630859375">
+               <font>
+                  <Font name="Songti SC Black" size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="srLogOutBtn" layoutX="614.0" layoutY="25.0" mnemonicParsing="false" onAction="#SRlogoutHandler" text="Log Out" />
+            <TableView fx:id="salesReportTable" layoutX="30.0" layoutY="121.0" onMouseClicked="#handleSalesReportClick" prefHeight="266.0" prefWidth="712.0" />
+            <Text layoutX="234.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Report" textAlignment="CENTER" wrappingWidth="304.5">
+               <font>
+                  <Font name="Songti SC Black" size="33.0" />
+               </font>
+            </Text>
+            <Line endX="307.0" layoutX="384.0" layoutY="68.0" startX="-303.0" strokeWidth="3.0" />
+            <Button layoutX="551.0" layoutY="25.0" mnemonicParsing="false" onAction="#eSalesTestHandler" text="Update" />
+            <Label fx:id="srTtlLabel" layoutX="32.0" layoutY="394.0" prefHeight="23.0" prefWidth="740.0" text="Total Money Made:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="495.0" prefHeight="17.0" prefWidth="54.0" text="Filter">
+               <font>
+                  <Font name="Songti SC Black" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="srNameTxt" layoutX="114.0" layoutY="495.0" onAction="#srFilterHandler" promptText="Name" />
+            <TextField fx:id="srItemNameTxt" layoutX="386.0" layoutY="495.0" onAction="#srFilterHandler" promptText="Item Name" />
+            <TextField fx:id="srDateTxt" layoutX="387.0" layoutY="535.0" onAction="#srFilterHandler" promptText="Date" />
+            <TextField fx:id="srPricetxt" layoutX="113.0" layoutY="535.0" onAction="#srFilterHandler" promptText="Price" />
+            <ChoiceBox fx:id="srPriceFilterBtn" layoutX="289.0" layoutY="534.0" onMouseClicked="#srFilterHandler" prefHeight="26.0" prefWidth="45.0" />
+            <ChoiceBox fx:id="srDateFilterBtn" layoutX="561.0" layoutY="534.0" onMouseClicked="#srFilterHandler" prefHeight="26.0" prefWidth="45.0" />
+            <Button fx:id="srFilterBtn" layoutX="694.0" layoutY="534.0" mnemonicParsing="false" onAction="#srFilterHandler" text="Filter" />
+            <Label layoutX="32.0" layoutY="439.0" prefHeight="17.0" prefWidth="54.0" text="Select:">
+               <font>
+                  <Font name="Songti SC Black" size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="SRcIDCheck" layoutX="101.0" layoutY="443.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Customer_ID" />
+            <CheckBox fx:id="SRDateCheck" layoutX="201.0" layoutY="443.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Date" />
+            <CheckBox fx:id="SRcNameCheck" layoutX="254.0" layoutY="443.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Customer Name" />
+            <CheckBox fx:id="SRcEmailCheck" layoutX="371.0" layoutY="443.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Customer Email" />
+            <CheckBox fx:id="SRiIDCheck" layoutX="484.0" layoutY="443.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Item ID" />
+            <CheckBox fx:id="SRiNameCheck" layoutX="551.0" layoutY="443.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Item Name" />
+            <CheckBox fx:id="SRiPriceCheck" layoutX="638.0" layoutY="443.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Item Price" />
+            <CheckBox fx:id="SRQuantityCheck" layoutX="101.0" layoutY="467.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Quantity" />
+            <CheckBox fx:id="SRtPriceCheck" layoutX="175.0" layoutY="467.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Total Price" />
+            <CheckBox fx:id="SRtCommCheck" layoutX="260.0" layoutY="467.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Total Commision" />
+            <CheckBox fx:id="SRtHoursCheck" layoutX="380.0" layoutY="467.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Total Hours Worked" />
+            <CheckBox fx:id="SRaveHoursCheck" layoutX="516.0" layoutY="467.0" mnemonicParsing="false" onAction="#SRcheckboxHandler" selected="true" text="Ave Hours spent per customer" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
