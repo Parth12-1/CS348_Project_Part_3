@@ -91,7 +91,7 @@ public class HelloController {
                     found = true;
                     customerOrEmployee = true;
                     System.out.println("ID" + id);
-                    // Process the retrieved data
+
                 }
             }
             catch (SQLException e) {
@@ -446,7 +446,6 @@ public class HelloController {
             total_Commisiion += salesData.getTotalCommission();
         }
 
-        //there are many copies of hours, only add if it is a unique date
         ArrayList<String> dates = new ArrayList<>();
         for (SalesData salesData : salesDataList) {
             if (!dates.contains(salesData.getDateTime().split(" ")[0])) {
@@ -568,9 +567,6 @@ public class HelloController {
                 totalHoursWorkedCol,
                 aveHoursPerCustomerCol
         );
-
-        //copy all the data to the selected data list
-        //set the employeeid column invisible
         employeeIDCol.setVisible(false);
 
         //set the columns to visible or not based on the checkboxes
